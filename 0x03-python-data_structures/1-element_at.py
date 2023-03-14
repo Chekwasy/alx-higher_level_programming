@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+def element_at(my_list, idx):
+    j = 0
+    for i in my_list:
+        if j == idx:
+            if i < 0:
+                return None
+            else:
+                return i
+        j += 1
+    return None
