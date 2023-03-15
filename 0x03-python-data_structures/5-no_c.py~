@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+def no_c(my_string):
+    j = 0
+    for i in my_string:
+        if ord(my_string[j]) == 99 or ord(my_string[j]) == (99 - 32):
+            my_string.pop([j])
+        j += 1
