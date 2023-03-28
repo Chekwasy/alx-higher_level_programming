@@ -3,11 +3,11 @@ def safe_print_list(my_list=[], x=0):
     try:
         j = 0
         for i in my_list:
-            j += 1
-            if j <= x:
+            if j < x:
                 print("{:d}".format(i), end='')
-                print('')
-    except:
-        print("")
+                j += 1
+        print('')
+    except TypeError:
+        pass
     finally:
         return j
