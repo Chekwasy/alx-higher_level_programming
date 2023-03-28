@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 def safe_print_integer(value):
     try:
-        check = False;
-        int(value)
+        check = False
         print("{:d}".format(value))
         check = True
 
