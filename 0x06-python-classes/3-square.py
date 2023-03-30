@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Class of square"""
+
+
 class Square:
     """Square Class
     A Square Class
@@ -14,10 +17,9 @@ class Square:
             ValueError: If `size` is less than `0`.
         """
 
-        if type(size) is not int:
+        if not isinstance(size, int):
             raise TypeError('size must be an integer')
-
-        if size < 0:
+        elif size < 0:
             raise ValueError('size must be >= 0')
 
         self.__size = size
@@ -25,4 +27,5 @@ class Square:
     def area(self):
         """Returns the current square area
         """
+
         return self.__size ** 2
