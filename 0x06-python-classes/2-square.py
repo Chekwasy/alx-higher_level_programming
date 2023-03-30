@@ -5,6 +5,8 @@ A Square Class
 
 
 class Square:
+    """A Square Class"""
+
 
     def __init__(self, size=0):
         """__init__
