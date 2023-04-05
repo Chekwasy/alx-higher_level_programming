@@ -15,7 +15,7 @@ class Rectangle:
         self.width = width
         self.height = height
 
-        """Class attribute width"""
+    """Class attribute width"""
 
     @property
     def width(self):
@@ -50,7 +50,6 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
