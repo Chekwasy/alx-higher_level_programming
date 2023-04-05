@@ -7,6 +7,7 @@ class Rectangle:
 
     number_of_instances = 0
     print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """init initialization"""
 
@@ -50,7 +51,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """Return the Rectangle with the greater area.
@@ -92,12 +92,14 @@ class Rectangle:
             if (self.__height - 1) is not i:
                 dstr.append("\n")
         return "".join(dstr)
+
     def __repr__(self):
         """Return the string representation of the Rectangle."""
 
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
         return (rect)
+
     def __del__(self):
         """Print a message for every deletion of a Rectangle."""
         type(self).number_of_instances -= 1

@@ -7,6 +7,7 @@ class Rectangle:
 
     number_of_instances = 0
     print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """init initialization"""
 
@@ -63,6 +64,7 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return (rect_1)
         return (rect_2)
+
     @classmethod
     def square(cls, size=0):
         """Return a new Rectangle with width and height equal to size.
@@ -99,12 +101,14 @@ class Rectangle:
             if (self.__height - 1) is not i:
                 dstr.append("\n")
         return "".join(dstr)
+
     def __repr__(self):
         """Return the string representation of the Rectangle."""
 
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
         return (rect)
+
     def __del__(self):
         """Print a message for every deletion of a Rectangle."""
         type(self).number_of_instances -= 1
