@@ -76,6 +76,7 @@ class Rectangle:
             if (self.__height - 1) is not i:
                 dstr.append("\n")
         return "".join(dstr)
+
     def __repr__(self):
         """Return the string representation of the Rectangle."""
 
