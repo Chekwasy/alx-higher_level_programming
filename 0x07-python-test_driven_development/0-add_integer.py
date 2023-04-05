@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""adding module"""
+
+
 def add_integer(a, b=98):
     """Adding two int numbeea"""
 

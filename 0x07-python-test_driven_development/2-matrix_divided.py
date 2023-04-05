@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""Matix divide"""
+
+
 def matrix_divided(matrix, div):
+    """the function for it"""
+
     a = 0
     b = 0
     _all = []
