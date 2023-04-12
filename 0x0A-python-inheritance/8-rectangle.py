@@ -22,6 +22,7 @@ class BaseGeometry:
 
 """New class to do inhericance"""
 
+
 class Rectangle(BaseGeometry):
     """Rectangle class"""
 
