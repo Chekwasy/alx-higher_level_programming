@@ -6,5 +6,4 @@ import json
 def to_json_string(my_obj):
     """The function"""
 
-    d_js = json.dumps(my_obj)
-    return (d_js)
+    return (json.dumps(my_obj))
