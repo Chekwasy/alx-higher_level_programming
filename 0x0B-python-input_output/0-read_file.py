@@ -6,4 +6,5 @@ def read_file(filename=""):
     """The open function"""
 
     with open(filename, encoding="utf-8") as a_file:
-        print(a_file.read())
+        for ln in a_file:
+            print(ln, end='')
