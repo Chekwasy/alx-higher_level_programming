@@ -4,6 +4,6 @@ import json
 
 
 def from_json_string(my_str):
-        """The j function"""
+    """The j function"""
 
-        return (json.loads(my_str))
+    return (json.loads(my_str))
