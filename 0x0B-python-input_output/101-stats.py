@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+"""the func"""
 import sys
 
 
 def print_info():
+    """it begins"""
+
     print('File size: {:d}'.format(file_size))
 
     for scode, code_times in sorted(status_codes.items()):
