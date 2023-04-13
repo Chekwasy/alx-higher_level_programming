@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-"""Load add and save"""
-
-
 from sys import argv
 from os import path
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
