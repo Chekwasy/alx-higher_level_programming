@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """json from stuff"""
-from json import loads
+import json
 
 
 def from_json_string(my_str):
         """The j function"""
 
-        return (loads(my_str))
+        return (json.loads(my_str))
