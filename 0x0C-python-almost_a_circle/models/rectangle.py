@@ -77,14 +77,14 @@ class Rectangle(Base):
     def display(self):
         """Display"""
 
-        for a in range(self.__y):
-            for b in range(self.__x):
-                print("", end='')
-            print("")
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end='')
-            print("")
+        if self.__y > 0:
+            print('\n' * self.__y, end='')
+
+        for i in range(self.height):
+            if self.__x > 0:
+                print(' ' * self.__x, end='')
+
+            print('#' * self.__width)
 
     def __str__(self):
         """str representation"""
