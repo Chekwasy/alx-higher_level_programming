@@ -13,9 +13,7 @@ class Base:
         if id == None:
             Base.__nb_objects += 1
             id = Base.__nb_objects
-            self.id = id
-        else:
-            self.id = id
+        self.id = id
 
     @staticmethod
     def to_json_string(list_dictionaries):
