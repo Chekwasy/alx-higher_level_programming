@@ -127,7 +127,7 @@ class Square:
             if j % self.__size == 1:
                 print('{:>{w}}'.format('#', w=self.__position[0] + 1), end='')
             else:
-                    print('#', end='')
+                print('#', end='')
 
-                    if j % self.__size == 0 and j > 0:
-                        print()
+                if j % self.__size == 0 and j > 0:
+                    print()
