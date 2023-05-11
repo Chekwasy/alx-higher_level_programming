@@ -124,10 +124,11 @@ class Square:
                 print('')
 
         a = 0
+        b = (self.__position[0])
         for j in range(self.__size):
             for k in range(self.__size):
                 if k < self.__position[0] and a == 0:
-                    for l in range(self.__position[0]):
+                    for i in range(b):
                         print(" ", end='')
                 a = 1
                 print('#', end='')
