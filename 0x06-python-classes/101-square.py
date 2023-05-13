@@ -138,8 +138,8 @@ class Square:
         """str rep"""
 
         dstr = ""
-        if self.__size == 0:
-            dstr = dstr + "\n"
+        if self.__size == 0 or self.size == 0:
+            dstr =  "\n"
             return dstr
 
         if self.__position[1] > 0:
