@@ -1,9 +1,7 @@
 #!/usr/bin/python3
+import sys
 """Solves the N-queens puzzle.
 """
-
-
-import sys
 
 
 def init_board(n):
