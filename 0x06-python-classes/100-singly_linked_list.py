@@ -1,0 +1,80 @@
+#!/usr/bin/python3
+"""Node class"""
+
+
+class Node:
+    """Node class begins"""
+
+    def __init__(self, data, next_node=None):
+        """init stuff"""
+
+        if type(data) is not int:
+            raise TypeError("data must be an integer")
+        if not isinstance(next_node, Node) and next_node is not None:
+            raise TypeError("next_node must be a Node object")
+        self.data = data
+        self.next_node = next_node
+
+    @property
+    def data(self):
+        """data property"""
+
+        return self.__data
+
+    @property
+    def next_node(self):
+        """next_node property"""
+
+        return self.__next_node
+
+    @data.setter
+    def data(self, value):
+        """data setter"""
+
+        if type(value) is not int:
+            raise TypeError("data must be an integer")
+        self.__data = value
+
+    @next_node.setter
+    def next_node(self, value):
+        """next_node setter"""
+
+        if not isinstance(value, Node) and value is not None:
+            raise TypeError("next_node must be a Node object")
+        self.__next_node = value
+
+
+class SinglyLinkedList:
+    """SinglyLinkedList class"""
+
+    def __init__(self):
+        """init stuff"""
+
+        self.__head = None
+
+    def sorted_insert(self, value):
+        """sorted singlylist"""
+
+        new_node = Node(value)
+        if self.__head is None:
+            self.__head = new_node
+            self.__head.nextnode = None
+        elif self.__head.data > value:
+            new_node.next_node = self.__head
+            self.__head = new_node
+        else:
+            temp = self.__head
+            while temp.next_node is not None and temp.next_node.data < value:
+                temp = temp.next_node
+            new_node.next_node = temp.next_node
+            temp.next_node = new_node
+
+    def __str__(self):
+        """str rep"""
+
+        all_data = []
+        tp = self.__head
+        while tp is not None:
+            all_data.append(str(tp.data))
+            tp = tp.next_node
+        return ('\n'.join(all_data))
