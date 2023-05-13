@@ -139,7 +139,6 @@ class Square:
 
         dstr = ""
         if self.__size == 0:
-            dstr = "\n"
             return dstr
 
         if self.__position[1] > 0:
