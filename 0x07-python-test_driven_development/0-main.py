@@ -6,7 +6,7 @@ print(add_integer(100, -2))
 print(add_integer(2))
 print(add_integer(2**1023, 2**1023))
 print(add_integer(5,))
-print(add_integer())
+print(add_integer(1.4, 2))
 
 try:
     print(add_integer(4, "School"))
