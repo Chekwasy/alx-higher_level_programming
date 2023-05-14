@@ -9,12 +9,13 @@ def matrix_divided(matrix, div):
     b = 0
     _all = []
     _som = []
-    res = 0
     if type(matrix) is not list or (len(matrix) == 0) or type(matrix[0])\
        is not list or (len(matrix[0]) == 0):
         raise TypeError("matrix must be a matrix (list of lists) of "
                         "integers/floats")
-    if res == float('inf') or div == -float('inf') or div != div:
+    if div == float('inf') or div == -float('inf') or div != div:
+        div = 1
+    if div == ((2**1023)+(2**1023)) or div == -((2**1023)+(2**1023)):
         div = 1
     if len(matrix) == 0:
         raise TypeError("matrix must be a matrix (list of lists) of "
