@@ -41,3 +41,7 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+'lists of float divinding integer'
+>>> matrix_divided([[9.4, 3.6, -1.2], [4.0, 1.6, 8.0], [1, 2, 3]], 2)
+[[4.7, 1.8, -0.6], [2.0, 0.8, 4.0], [0.5, 1.0, 1.5]]

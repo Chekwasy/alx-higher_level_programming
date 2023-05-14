@@ -9,7 +9,8 @@ def matrix_divided(matrix, div):
     b = 0
     _all = []
     _som = []
-    if type(matrix) is not list:
+    if type(matrix) is not list or (len(matrix) == 0) or type(matrix[0])\
+       is not list or (len(matrix[0]) == 0):
         raise TypeError("matrix must be a matrix (list of lists) of "
                         "integers/floats")
     if len(matrix) == 0:
