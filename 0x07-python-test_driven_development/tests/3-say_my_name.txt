@@ -16,7 +16,7 @@ My name is Walter
 
 'first_name and last_name empty'
 >>> say_my_name("")
-My name is
+My name is 
 
 'first_name is an integer'
 >>> say_my_name(1, "White")
