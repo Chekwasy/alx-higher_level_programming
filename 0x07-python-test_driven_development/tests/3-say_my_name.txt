@@ -12,7 +12,7 @@ My name is Walter White
 
 'last_name is empty'
 >>> say_my_name("Walter")
-My name is Walter
+My name is Walter 
 
 'first_name and last_name empty'
 >>> say_my_name("")
