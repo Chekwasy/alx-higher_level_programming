@@ -8,8 +8,8 @@ matrix = [
 print(matrix_divided(matrix, 3))
 print(matrix)
 matrix = [
-            [1, 2],
+            [1, 2, 3],
             [4, 5, 6]
         ]
-print(matrix_divided(matrix, 1))
+print(matrix_divided(matrix, (2**1023) + (2**1023)))
 print(matrix)
