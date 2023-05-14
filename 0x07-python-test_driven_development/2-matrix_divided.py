@@ -9,6 +9,9 @@ def matrix_divided(matrix, div):
     b = 0
     _all = []
     _som = []
+    if type(matrix) is not list:
+        raise TypeError("matrix must be a matrix (list of lists) of "
+                        "integers/floats")
     if len(matrix) == 0:
         raise TypeError("matrix must be a matrix (list of lists) of "
                         "integers/floats")
@@ -30,4 +33,5 @@ def matrix_divided(matrix, div):
             b = a
             _som.append(round(j / div, 2))
         _all.append(_som)
+        _som = []
     return _all
