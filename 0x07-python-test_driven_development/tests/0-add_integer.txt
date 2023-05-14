@@ -50,4 +50,4 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 
 'testing overflow'
 >>> add_integer(2**1023, 2**1023)
-inf
+'inf'
