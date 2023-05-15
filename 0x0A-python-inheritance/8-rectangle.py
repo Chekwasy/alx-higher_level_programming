@@ -20,8 +20,6 @@ class BaseGeometry:
         self.name = name
         self.value = value
 
-"""New class to do inhericance"""
-
 
 class Rectangle(BaseGeometry):
     """Rectangle class"""
@@ -29,6 +27,7 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         """instatia"""
 
+        super().__init__()
         self.integer_validator("width", width)
         self.integer_validator("height", height)
 
