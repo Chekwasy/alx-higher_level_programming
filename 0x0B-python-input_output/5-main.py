@@ -24,3 +24,17 @@ try:
     save_to_json_file(my_set, filename)
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    filemame = "file_7"
+    data = { 1, 2, 3 }
+    save_to_json_file(data, filemame)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    filemame = "no_perm/file_7"
+    data = [1, 2, 3]
+    save_to_json_file(data, filemame)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
