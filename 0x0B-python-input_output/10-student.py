@@ -25,10 +25,8 @@ class Student:
                 if type(atr) is not str:
                     return dclass
 
-                if atr in dclass:
-                    dsel[atr] = dclass[atr]
+            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
 
-                    return dsel
 
             return dclass
         return self.__dict__
