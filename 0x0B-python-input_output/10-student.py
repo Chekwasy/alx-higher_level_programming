@@ -16,13 +16,16 @@ class Student:
         """retriving dictionary"""
 
         dclass = self.__dict__
-        dsel = dict()
+        dsel = {}
 
         if type(attrs) is list:
             for atr in attrs:
                 if type(atr) is not str:
                     return dclass
 
-            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
+            for k in attrs:
+                if hasattr(self, k):
+                    dsel[k] = getattr(self, k)
+            return dsel
 
         return self.__dict__
