@@ -18,6 +18,8 @@ class Student:
         dclass = self.__dict__
         dsel = dict()
 
+        if attrs == []:
+            return dclass
         if type(attrs) is list:
             for atr in attrs:
                 if type(atr) is not str:
