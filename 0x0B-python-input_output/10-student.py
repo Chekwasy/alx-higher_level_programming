@@ -18,8 +18,6 @@ class Student:
         dclass = self.__dict__
         dsel = dict()
 
-        if attrs == []:
-            return dclass
         if type(attrs) is list:
             for atr in attrs:
                 if type(atr) is not str:
@@ -27,6 +25,4 @@ class Student:
 
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
 
-
-            return dclass
         return self.__dict__
