@@ -15,6 +15,6 @@ def append_after(filename="", search_string="", new_string=""):
             if search_string in line:
                 new_text.append(new_string)
 
-    with open(filename, mode='a', encoding='utf-8') as nf:
-        for line in new_text:
-            nf.write(line)
+    with open(filename, mode='w', encoding='utf-8') as nf:
+        for i in new_text:
+            nf.write(i)
