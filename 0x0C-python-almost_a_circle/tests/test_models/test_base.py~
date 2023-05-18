@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+"""A file that test the base class of rectangle"""
+import pep8
+import unittest
+import os
+from models.Base import Base
+from models.rectangle import rectangle
