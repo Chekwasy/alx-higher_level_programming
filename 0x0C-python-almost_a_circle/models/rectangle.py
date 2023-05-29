@@ -103,3 +103,13 @@ class Rectangle(Base):
         return "[Rectangle] " + "(" + str(self.id) + ") " + str(self.__x) +\
             "/" + str(self.__y) + " - " + str(self.__width) + "/" + \
             str(self.__height)
+
+    def update(self, *args):
+        """update for args method"""
+
+        lst = ["id", "width", "height", "x", "y"]
+        ln = len(args)
+        if ln > 5:
+            ln = 5
+        for i in range(ln):
+            setattr(self, lst[i], args[i])
