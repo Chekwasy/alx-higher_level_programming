@@ -2,6 +2,7 @@
 """Square class"""
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """Class Square begins"""
 
@@ -13,5 +14,5 @@ class Square(Rectangle):
     def __str__(self):
         """string representation method for square"""
 
-        return "[Square] "+"("+str(self.id)+") "+str(self.x)+"/"+\
-            str(self.y)+" - "+str(self.width)
+        return "[Square] "+"("+str(self.id)+") "+str(self.x)+"/" \
+            + str(self.y)+" - "+str(self.width)
