@@ -16,3 +16,19 @@ class Square(Rectangle):
 
         return "[Square] "+"("+str(self.id)+") "+str(self.x)+"/" \
             + str(self.y)+" - "+str(self.width)
+
+    @property
+    def size(self):
+        """size getter method"""
+
+        return self.width
+
+    @size.setter
+    def size(self, size):
+        """size setter method"""
+
+        if type(size) is not int:
+            raise TypeError("width must be an interger")
+        if size <= 0:
+            raise ValueError("width must be > 0")
+        self.width = size
