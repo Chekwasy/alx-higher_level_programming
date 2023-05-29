@@ -104,12 +104,18 @@ class Rectangle(Base):
             "/" + str(self.__y) + " - " + str(self.__width) + "/" + \
             str(self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update for args method"""
 
         lst = ["id", "width", "height", "x", "y"]
         ln = len(args)
+        ln2 = len(kwargs)
         if ln > 5:
             ln = 5
-        for i in range(ln):
-            setattr(self, lst[i], args[i])
+        if ln > 0:
+            for i in range(ln):
+                setattr(self, lst[i], args[i])
+        if ln2 > 0:
+            for x, v in kwargs.items():
+                if hasattr(self, x):
+                    setattr(self, x, v)
