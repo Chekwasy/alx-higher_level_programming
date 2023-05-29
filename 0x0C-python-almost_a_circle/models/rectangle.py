@@ -119,3 +119,8 @@ class Rectangle(Base):
             for x, v in kwargs.items():
                 if hasattr(self, x):
                     setattr(self, x, v)
+
+    def to_dictionary(self):
+        """returning dictionary of Rectangle class method"""
+
+        return (self.__dict__)
