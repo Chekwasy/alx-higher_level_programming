@@ -61,10 +61,31 @@ class Base:
     def create(cls, **dictionary):
         """creating instance from a dictionary"""
 
-        if str(cls.__name__) is "Rectangle":
+        if str(cls.__name__) == "Rectangle":
             dummy = cls(2, 3)
-        if str(cls.__name__) is "Square":
+        if str(cls.__name__) == "Square":
             dummy = cls(3)
         if len(dictionary) > 0:
             dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """class method that returns list of instances from a file"""
+
+        emt = []
+        filename = ""
+        if str(cls.__name__) == "Rectangle":
+            filename = "Rectangle.json"
+        if str(cls.__name__) == "Square":
+            filename = "Square.json"
+        if not os.path.exists(filename):
+            return emt
+        if os.path.exists(filename):
+            with open(filename, 'r', encoding='utf-8') as file1:
+                txt = file1.read()
+                jsn = Base.from_json_string(txt)
+                for i in jsn:
+                    inst = cls.create(**i)
+                    emt.append(inst)
+        return emt
