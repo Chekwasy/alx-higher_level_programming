@@ -2,6 +2,7 @@
 """Base Class"""
 import json
 import os
+import csv
 
 
 class Base:
@@ -87,5 +88,53 @@ class Base:
                 jsn = Base.from_json_string(txt)
                 for i in jsn:
                     inst = cls.create(**i)
+                    emt.append(inst)
+        return emt
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Class meth. to save list of inst. meth. of rec. or sq. in csv"""
+
+        emt = []
+        filename = str(cls.__name__)+".csv"
+        if list_objs is None:
+            with open(filename, 'w', encoding='utf-8') as file1:
+                csv.writer(str(emt))
+        else:
+            if os.path.exists(filename):
+                os.remove(filename)
+            for ins in list_objs:
+                dit = ins.to_dictionary()
+                for i, j in dit.items():
+                    emt.append(j)
+                with open(filename, 'a', encoding="utf-8") as file1:
+                    csvobj = csv.writer(file1)
+                    csvobj.writerow(emt)
+                    emt = []
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """class method that returns list of instances from a file via csv"""
+
+        emt = []
+        filename = ""
+        if str(cls.__name__) == "Rectangle":
+            filename = "Rectangle.csv"
+        if str(cls.__name__) == "Square":
+            filename = "Square.csv"
+        if not os.path.exists(filename):
+            return emt
+        if os.path.exists(filename):
+            with open(filename, 'r', encoding='utf-8') as file1:
+                csv_txt = csv.reader(file1)
+                for i in csv_txt:
+                    if str(cls.__name__) == "Rectangle":
+                        ditt = {"id": int(i[0]), "width": int(i[1]),
+                                "height": int(i[2]),
+                                "x": int(i[3]), "y": int(i[4])}
+                    if str(cls.__name__) == "Square":
+                        ditt = {"id": int(i[0]), "size": int(i[1]),
+                                "x": int(i[2]), "y": int(i[3])}
+                    inst = cls.create(**ditt)
                     emt.append(inst)
         return emt
