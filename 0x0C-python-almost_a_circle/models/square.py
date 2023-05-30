@@ -47,3 +47,8 @@ class Square(Rectangle):
             for i, j in kwargs.items():
                 if hasattr(self, i):
                     setattr(self, i, j)
+    def to_dictionary(self):
+        """from instances to dictionary method for square"""
+
+        dit = {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
+        return dit
