@@ -25,6 +25,6 @@ class Base:
         """
         emt = []
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            return emt
+            return str(emt)
         else:
             return json.dumps(list_dictionaries)
