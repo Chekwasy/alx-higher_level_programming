@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base Class"""
 import json
+import os
 
 
 class Base:
@@ -28,3 +29,20 @@ class Base:
             return str(emt)
         else:
             return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """Class meth. to save list of inst. meth. of rec. or sq."""
+
+        emt = []
+        filename = str(cls.__name__)+".json"
+        if list_objs is None:
+            with open(filename, 'w', encoding='utf-8') as file1:
+                file1.write(str(emt))
+        else:
+            for ins in list_objs:
+                dit = ins.to_dictionary()
+                emt.append(dit)
+            jstr = Base.to_json_string(emt)
+            with open(filename, 'w', encoding="utf-8") as file1:
+                file1.write(jstr)
