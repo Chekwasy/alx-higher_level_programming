@@ -56,3 +56,15 @@ class Base:
             return emt
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """creating instance from a dictionary"""
+
+        if str(cls.__name__) is "Rectangle":
+            dummy = cls(2, 3)
+        if str(cls.__name__) is "Square":
+            dummy = cls(3)
+        if len(dictionary) > 0:
+            dummy.update(**dictionary)
+        return dummy
