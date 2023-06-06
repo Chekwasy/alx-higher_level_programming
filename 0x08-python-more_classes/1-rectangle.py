@@ -8,20 +8,20 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """instiation for rectangle"""
 
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
         """Width getter"""
 
-        return self.width
+        return self.__width
 
     @property
     def height(self):
         """Height getter"""
 
-        return self.height
+        return self.__height
 
     @width.setter
     def width(self, value):
