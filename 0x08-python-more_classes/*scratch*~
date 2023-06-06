@@ -3,6 +3,3 @@
 
 
 class Rectangle:
-    """Rectangle class begins"""
-
-    pass
