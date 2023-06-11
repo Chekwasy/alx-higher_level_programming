@@ -5,11 +5,6 @@
 class MyList(list):
     """class begins"""
 
-    def __init__(self):
-        """intailizati"""
-
-        super().__init__()
-
     def print_sorted(self):
         """to print sorted list"""
 
