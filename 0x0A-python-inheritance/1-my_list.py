@@ -1,14 +1,18 @@
 #!/usr/bin/python3
-"""my list class"""
+"""list print
+"""
 
 
 class MyList(list):
-    """class begins"""
+    """
+     class MyList that inherits from list
+    """
 
     def print_sorted(self):
-        """to print sorted list"""
+        """
+        Public instance method that prints sorted list
+        """
 
-        my = []
-        my = self.copy()
-        my.sort()
-        print(my)
+        list_copy = self[:]
+        list_copy.sort()
+        print(list_copy)

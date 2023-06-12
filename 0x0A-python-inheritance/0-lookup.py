@@ -3,6 +3,8 @@
 
 
 def lookup(obj):
-    """lookup begins"""
+    """
+    Returns all objects in an objects dictionary as a list
+    """
 
     return dir(obj)

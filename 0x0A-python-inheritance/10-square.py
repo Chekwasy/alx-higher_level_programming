@@ -1,18 +1,23 @@
 #!/usr/bin/python3
-"""Square Class"""
+"""Square class"""
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """Square class begins"""
+    """Square class"""
 
     def __init__(self, size):
-        """init method"""
+        """instatia"""
 
-        super().__init__(size, size)
+        self.integer_validator("size", size)
         self.__size = size
 
     def area(self):
-        """area method"""
+        """Area of square"""
 
-        return self.__size * self.__size
+        return (self.__size * self.__size)
+
+    def __str__(self):
+        """str repre"""
+
+        return "[Rectangle] " + str(self.__size) + "/" + str(self.__size)
