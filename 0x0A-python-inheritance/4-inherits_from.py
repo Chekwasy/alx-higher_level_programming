@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Check for subclass"""
+"""just method"""
 
 
 def inherits_from(obj, a_class):
-    """The function to check the subclass"""
+    """methid begins"""
 
-    if isinstance(obj, a_class):
-        if issubclass(a_class, obj.__class__) is False:
+    if type(obj) is not a_class:
+        if issubclass(type(obj), a_class):
             return True
         else:
             return False

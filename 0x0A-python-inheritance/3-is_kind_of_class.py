@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-"""checking instantanous"""
+"""jsut metgod"""
 
 
 def is_kind_of_class(obj, a_class):
-    """Check instantanous function"""
+    """method begins"""
 
-    return (isinstance(obj, a_class))
+    if isinstance(obj, a_class):
+        return True
+    else:
+        return False

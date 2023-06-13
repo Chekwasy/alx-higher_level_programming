@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""just a method"""
+"""function to check isistance"""
 
 
 def is_same_class(obj, a_class):
-    """mth begins"""
+    """Checking isistance"""
 
-    if type(obj) is a_class:
+    if type(obj) == a_class:
         return True
     else:
         return False
