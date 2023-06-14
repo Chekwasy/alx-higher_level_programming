@@ -1,17 +1,12 @@
 #!/usr/bin/python3
-Rectangle = __import__('8-rectangle').Rectangle
+MyClass = __import__('8-my_class').MyClass
+class_to_json = __import__('8-class_to_json').class_to_json
 
-r = Rectangle(3, 5)
+m = MyClass("John")
+m.number = 89
+print(type(m))
+print(m)
 
-print(r)
-print(dir(r))
-
-try:
-    print("Rectangle: {} - {}".format(r.width, r.height))
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-try:
-    r2 = Rectangle(4, True)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+mj = class_to_json(m)
+print(type(mj))
+print(mj)

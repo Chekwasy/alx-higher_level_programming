@@ -1,1 +1,1 @@
-readme inheritance
+readme for in and output
