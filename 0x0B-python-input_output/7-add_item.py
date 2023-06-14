@@ -13,7 +13,7 @@ else:
     lst = load_from_json_file("add_item.json")
 if len(argv) > 1:
     for a in range(len(argv)):
-        if a > 1:
+        if a >= 1:
             lst.append(argv[a])
 
 save_to_json_file(lst, "add_item.json")
