@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+"""function to write file"""
+
+
+def write_file(filename="", text=""):
+    """the func"""
+
+    
