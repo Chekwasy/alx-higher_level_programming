@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """fun to save all arguments"""
+import os
 import json
+from sys import argv
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
-from sys import argv
-import os
 
 
 if not os.path.exists("add_item.json"):
