@@ -1,31 +1,27 @@
 #!/usr/bin/python3
-"""Student Class"""
+"""student class"""
 
 
 class Student:
-    """Class begin"""
+    """class begins"""
 
     def __init__(self, first_name, last_name, age):
-        """init stuff"""
+        """init method"""
 
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        """retriving dictionary"""
+        """class to dict method"""
 
-        dclass = self.__dict__
-        dsel = {}
-
-        if type(attrs) is list:
-            for atr in attrs:
-                if type(atr) is not str:
-                    return dclass
-
-            for k in attrs:
-                if hasattr(self, k):
-                    dsel[k] = getattr(self, k)
-            return dsel
-
+        dct = {}
+        if attrs != None:
+            if type(attrs) is list:
+                for a in attrs:
+                    if type(a) is str:
+                        if hasattr(self, a):
+                            dct[a] = getattr(self, a)
+                if len(dct) != 0:
+                    return dct
         return self.__dict__

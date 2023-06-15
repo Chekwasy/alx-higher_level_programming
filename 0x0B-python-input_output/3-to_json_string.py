@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""json stuff"""
-from json import dumps
+"""fun for taking dict to dict"""
+import json
 
 
 def to_json_string(my_obj):
-    """The function"""
+    """the func"""
 
-    return (dumps(my_obj))
+    return json.dumps(my_obj)

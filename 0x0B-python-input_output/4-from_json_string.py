@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""json from stuff"""
+"""function to change json str to real str"""
 import json
 
 
 def from_json_string(my_str):
-    """The j function"""
+    """from json"""
 
-    return (json.loads(my_str))
+    return json.loads(my_str)
