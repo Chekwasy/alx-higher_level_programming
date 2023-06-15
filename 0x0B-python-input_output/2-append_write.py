@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""Function to append"""
+"""function to append file"""
 
 
 def append_write(filename="", text=""):
-    """The function"""
+    """the func"""
 
-    with open(filename, mode='a', encoding='utf-8') as a_file:
-        nb = a_file.write(text)
-
-    return (nb)
+    with open(filename, "a", encoding="utf-8") as file1:
+        nb = file1.write(text)
+        return nb
