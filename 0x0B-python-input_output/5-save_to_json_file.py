@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""func to save json to str in a file"""
+"""json from stuff"""
 import json
 
 
 def save_to_json_file(my_obj, filename):
-    """d func"""
+    """The j function"""
 
-    with open(filename, "w", encoding="utf-8") as file1:
-        file1.write(json.dumps(my_obj))
+    with open(filename, 'w') as a_file:
+        json.dump(my_obj, a_file)

@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""function to write file"""
+"""Writing function"""
 
 
 def write_file(filename="", text=""):
-    """the func"""
+    """The Function"""
 
-    with open(filename, "w", encoding="utf-8") as file1:
-        nb = file1.write(text)
-        return nb
+    with open(filename, mode='w', encoding='utf-8') as a_file:
+        nb = a_file.write(text)
+    return (nb)

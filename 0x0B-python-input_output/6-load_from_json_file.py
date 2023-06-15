@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""load from a file via json"""
+"""Fro. json file to json"""
 import json
 
 
 def load_from_json_file(filename):
-    """the func"""
+    """The function"""
 
-    with open(filename, "r", encoding="utf-8") as file1:
-        txt = file1.read()
-        return json.loads(txt)
+    string = ""
+    with open(filename, encoding='utf-8') as a_file:
+        return (json.loads(a_file.read()))

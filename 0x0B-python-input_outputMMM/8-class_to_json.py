@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Thefunc"""
+"""class to dict"""
 
 
 def class_to_json(obj):
-    """aa"""
+    """the func"""
 
     return obj.__dict__

@@ -1,1 +1,1 @@
-readme for input and output
+readme for in and output

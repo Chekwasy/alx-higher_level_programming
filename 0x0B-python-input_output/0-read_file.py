@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""function to readfile"""
+"""reading q file"""
 
 
 def read_file(filename=""):
-    """funct"""
+    """The open function"""
 
-    with open(filename, "r", encoding="utf-8") as file1:
-        txt = file1.read()
-        print(txt, end='')
+    with open(filename, encoding="utf-8") as a_file:
+        for ln in a_file:
+            print(ln, end='')
