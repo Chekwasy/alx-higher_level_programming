@@ -18,10 +18,12 @@ class Student:
         dct = {}
         if attrs is not None:
             if type(attrs) is list:
+                if len(attrs) == 0:
+                    return self.__dict__
                 for a in attrs:
                     if type(a) is str:
                         if hasattr(self, a):
                             dct[a] = getattr(self, a)
-                if len(dct) != 0 || len(attrs) == 0:
+                if len(dct) != 0:
                     return dct
         return self.__dict__
