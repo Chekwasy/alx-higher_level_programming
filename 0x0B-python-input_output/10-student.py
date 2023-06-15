@@ -16,6 +16,8 @@ class Student:
         """class to dict method"""
 
         dct = {}
+        if len(attrs) == 0:
+            return self.__dict__
         if attrs is not None:
             if type(attrs) is list:
                 for a in attrs:
