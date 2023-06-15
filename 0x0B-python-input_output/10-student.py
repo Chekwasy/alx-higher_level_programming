@@ -24,5 +24,6 @@ class Student:
                             dct[a] = getattr(self, a)
                     else:
                         return self.__dict__
-                return dct
+                if len(dct) > 0:
+                    return dct
         return self.__dict__
