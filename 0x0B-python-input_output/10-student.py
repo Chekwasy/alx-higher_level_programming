@@ -16,7 +16,7 @@ class Student:
         """class to dict method"""
 
         dct = {}
-        if attrs != None:
+        if attrs is not None:
             if type(attrs) is list:
                 for a in attrs:
                     if type(a) is str:

@@ -16,7 +16,7 @@ class Student:
         """class to dict method"""
 
         dct = {}
-        if attrs != None:
+        if attrs is not None:
             if type(attrs) is list:
                 for a in attrs:
                     if type(a) is str:
@@ -29,5 +29,5 @@ class Student:
     def reload_from_json(self, json):
         """reload from json method"""
 
-        for a,b in json.items():
+        for a, b in json.items():
             setattr(self, a, b)
