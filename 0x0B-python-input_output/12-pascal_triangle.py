@@ -17,7 +17,7 @@ def pascal_triangle(n):
         d = len(sub)
         for b in range(1, d):
             new[b] = sub[b - 1] + sub[b]
-            
+
         sub = new[:]
         tri.append(sub)
     return tri
