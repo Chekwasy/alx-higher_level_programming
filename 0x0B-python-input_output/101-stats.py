@@ -3,50 +3,34 @@
 import sys
 
 
-def print_info():
-    """it begins"""
-
-    print('File size: {:d}'.format(file_size))
-
-    for scode, code_times in sorted(status_codes.items()):
-        if code_times > 0:
-            print('{}: {:d}'.format(scode, code_times))
-
 status_codes = {
-    '200': 0,
-    '301': 0,
-    '400': 0,
-    '401': 0,
-    '403': 0,
-    '404': 0,
-    '405': 0,
-    '500': 0
-}
-
-lc = 0
+    "200": 0,
+    "301": 0,
+    "400": 0,
+    "401": 0,
+    "403": 0,
+    "404": 0,
+    "405": 0,
+    "500": 0
+    }
 file_size = 0
-
+count = 0
 try:
     for line in sys.stdin:
-        if lc != 0 and lc % 10 == 0:
-            print_info()
-
-        pieces = line.split()
-
-        try:
-            status = int(pieces[-2])
-
-            if str(status) in status_codes.keys():
-                status_codes[str(status)] += 1
-        except:
-            pass
-        try:
-            file_size += int(pieces[-1])
-        except:
-            pass
-            lc += 1
-
-    print_info()
+        if count != 0 and count % 10 == 0:
+            print("File size: {}".format(file_size))
+            for g, h in status_codes.items():
+                if h != 0:
+                    print("{}: {}".format(g, h))
+        split = line.split()
+        for a, b in status_codes.items():
+            if str(a) == str(split[-2]):
+                status_codes[a] = int(b) + 1
+        file_size += int(split[-1])
+        count += 1
 except KeyboardInterrupt:
-    print_info()
+    print("File size: {}".format(file_size))
+    for g, h in status_codes.items():
+        if h != 0:
+            print("{}: {}".format(g, h))
     raise
