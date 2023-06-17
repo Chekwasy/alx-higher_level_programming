@@ -23,6 +23,8 @@ try:
                 if h != 0:
                     print("{}: {:d}".format(g, h))
         split = line.split()
+        if len(split) < 7:
+            continue
         for a, b in status_codes.items():
             if str(a) == str(split[-2]):
                 status_codes[a] = int(b) + 1
