@@ -40,13 +40,11 @@ try:
                 status_codes[str(status)] += 1
         except:
             pass
-
         try:
             file_size += int(pieces[-1])
         except:
             pass
-
-        lc += 1
+            lc += 1
 
     print_info()
 except KeyboardInterrupt:
