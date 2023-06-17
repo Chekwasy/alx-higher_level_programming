@@ -18,10 +18,10 @@ count = 0
 try:
     for line in sys.stdin:
         if count != 0 and count % 10 == 0:
-            print("File size: {}".format(file_size))
+            print("File size: {:d}".format(file_size))
             for g, h in status_codes.items():
                 if h != 0:
-                    print("{}: {}".format(g, h))
+                    print("{}: {:d}".format(g, h))
         split = line.split()
         for a, b in status_codes.items():
             if str(a) == str(split[-2]):
@@ -29,8 +29,8 @@ try:
         file_size += int(split[-1])
         count += 1
 except KeyboardInterrupt:
-    print("File size: {}".format(file_size))
+    print("File size: {:d}".format(file_size))
     for g, h in status_codes.items():
         if h != 0:
-            print("{}: {}".format(g, h))
+            print("{}: {:d}".format(g, h))
     raise
