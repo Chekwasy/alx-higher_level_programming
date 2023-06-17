@@ -22,18 +22,17 @@ try:
             for g, h in status_codes.items():
                 if h != 0:
                     print("{}: {:d}".format(g, h))
-        try:
-            split = line.split()
-            for a, b in status_codes.items():
-                if str(a) == str(split[-2]):
-                    status_codes[a] = int(b) + 1
-        except:
-            raise
-        try:
-            file_size += int(split[-1])
-        except:
-            raise
+        split = line.split()
+        for a, b in status_codes.items():
+            if str(a) == str(split[-2]):
+                status_codes[a] = int(b) + 1
+        file_size += int(split[-1])
+
         count += 1
+    print("File size: {:d}".format(file_size))
+    for g, h in status_codes.items():
+        if h != 0:
+            print("{}: {:d}".format(g, h))
 except KeyboardInterrupt:
     print("File size: {:d}".format(file_size))
     for g, h in status_codes.items():
