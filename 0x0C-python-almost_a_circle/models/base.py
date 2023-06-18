@@ -3,7 +3,6 @@
 import json
 import os
 import csv
-import turtle
 
 
 class Base:
@@ -139,14 +138,3 @@ class Base:
                     inst = cls.create(**ditt)
                     emt.append(inst)
         return emt
-
-    @staticmethod
-    def draw(list_rectangles, list_squares):
-        """static method to draw squares and rectangles"""
-
-        tur = turtle.Turtle()
-        Turtle.screen()
-        tur.forward(list_rectangles[0].width)
-        tur.left(list_rectangles[0].height)
-        tur.backward(list_rectangles[0].width)
-        tur.right(list_rectangles[0].height)
