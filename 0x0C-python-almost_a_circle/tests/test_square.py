@@ -16,3 +16,15 @@ class TestSquare(unittest.TestCase):
         pep = pep8.StyleGuide(quit=True)
         chk = pep.check_files(["models/square.py"])
         self.assertEqual(chk.total_errors, 0, "Found code style errors (and warnings).")
+
+    def test_doctest(self):
+        """doc test"""
+
+        self.assertTrue(len(Base.__doc__) >= 1)
+
+    def test_sqauare_all_positive(self):
+        """square testing"""
+
+        a = Square(3,3,3,3)
+        self.assertEqual(a.area(), 9)
+        self.assertEqual(a.id, 3)

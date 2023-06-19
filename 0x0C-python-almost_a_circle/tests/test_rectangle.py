@@ -15,3 +15,15 @@ class TestRectangle(unittest.TestCase):
         pep = pep8.StyleGuide(quit=True)
         chk = pep.check_files(["models/rectangle.py"])
         self.assertEqual(chk.total_errors, 0, "Found code style errors (and warnings).")
+
+    def test_doctest(self):
+        """doc testing"""
+
+        self.assertTrue(len(Rectangle.__doc__) >= 1)
+
+    def test_rectangle_all(self):
+        """all rectangle testing"""
+
+        a = Rectangle(3,3,3,3,4)
+        self.assertEqual(a.area(), 9)
+        self.assertEqual(a.id, 4)
