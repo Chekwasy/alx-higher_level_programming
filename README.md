@@ -1,1 +1,1 @@
-readme for more data structure
+readme for intro to mysql
