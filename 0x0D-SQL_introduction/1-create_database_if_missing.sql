@@ -1,2 +1,2 @@
---creating a table in mysql
+-- creating a table in mysql
 CREATE TABLE IF NOT EXISTS `hbtn_0c_0`;
