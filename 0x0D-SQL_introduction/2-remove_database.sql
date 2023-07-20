@@ -1,2 +1,2 @@
--- deleting a table
-DROP TABLE IF EXISTS `hbtn_0c_0`;
+-- deleting a database
+DROP DATABASE IF EXISTS `hbtn_0c_0`;
