@@ -1,0 +1,2 @@
+-- creating a table in current database if it does noe exist
+CREATE 
