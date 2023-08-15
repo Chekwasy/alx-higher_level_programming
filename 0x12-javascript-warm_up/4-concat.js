@@ -1,4 +1,2 @@
 #!/usr/bin/node
-let stringg = '';
-stringg = process.argv[2] + ' ' + 'is' + ' ' + process.argv[3]
-console.log(stringg);
+console.log('{$process.argv[2]} is {$process.argv[3]}');
