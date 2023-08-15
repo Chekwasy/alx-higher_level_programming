@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let stringg = ''
+let stringg = '';
 
 if (typeof process.argv[2] === 'undefined') {
   stringg = 'No argument'
