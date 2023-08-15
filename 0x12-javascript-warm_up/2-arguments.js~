@@ -1,0 +1,9 @@
+#!/usr/bin/node
+let stringg = '';
+if (typeof process.argv[2] === 'undefined')
+    stringg = 'No argument'
+if (typeof process.argv[3] === 'undefined')
+    stringg = 'Argument found'
+if (typeof process.argv[4] === 'undefined')
+    stringg = 'Arguments found'
+console.log(stringg);
