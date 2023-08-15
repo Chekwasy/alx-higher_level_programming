@@ -1,2 +1,3 @@
 #!/usr/bin/node
-console.log(typeof process.argv[2] === 'undefined' ? 'No argument' : typeof process.argv[3] === 'undefined'? 'Argument found' : 'Arguments found');
+const count = process.argv.length;
+console.log(count === 2 ? 'No argument' : count === 3 ? 'Argument found' : 'Arguments found');
