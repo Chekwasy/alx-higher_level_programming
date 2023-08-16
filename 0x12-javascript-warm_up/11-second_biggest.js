@@ -1,0 +1,16 @@
+#!/usr/bin/node
+const len = process.argv.length;
+let secNum = 0;
+let bigNum = Math.floor(Number(process.argv[2]));
+if (len < 4) {
+  console.log(secNum);
+} else {
+  secNum = Math.floor(Number(process.argv[3]));
+  for (let i = 2; i < len; i = i + 1) {
+    if (bigNum < Math.floor(Number(process.argv[i + 1]))) {
+      secNum = bigNum;
+      bigNum = Math.floor(Number(process.argv[i + 1]));
+    }
+  }
+  console.log(secNum);
+}
