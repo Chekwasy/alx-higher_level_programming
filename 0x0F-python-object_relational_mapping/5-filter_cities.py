@@ -15,4 +15,4 @@ if __name__ == "__main__":
     rows = cur.fetchall()
     for row in rows:
         if (row[2] == sys.argv[4]):
-            print(row)
+            print(", ".join([row[0]))
