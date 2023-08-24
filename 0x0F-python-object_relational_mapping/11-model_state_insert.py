@@ -20,9 +20,5 @@ if __name__ == "__main__":
     new = State(name='Louisiana')
     session.add(new)
     session.commit()
-    new_state = session.query(State).filter(State.name == 'Louisiana').first()
-    session.commit()
-    for state in session.query(State).order_by(State.id).all():
-        if sys.argv[4] == state.name:
-            print("{}".format(state.id))
+    print(new.id)
     session.close()
