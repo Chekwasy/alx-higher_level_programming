@@ -19,6 +19,6 @@ if __name__ == "__main__":
         if sys.argv[4] == state.name:
             print("{}".format(state.id))
             found = True
-    if found == False:
+    if not found:
         print("Not found")
     session.close()
