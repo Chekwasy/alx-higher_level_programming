@@ -15,10 +15,14 @@ if __name__ == "__main__":
                                    sys.argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
-    session = Session(engine)
+    Session = sessionmaker(engine)
+    session = Session()
     new = State(name='Louisiana')
     session.add(new)
+    session.commit()
     new_state = session.query(State).filter(State.name == 'Louisiana').first()
     session.commit()
-    print("{}".format(new_state.id))
+    for state in session.query(State).order_by(State.id).all():
+        if sys.argv[4] == state.name:
+            print("{}".format(state.id))
     session.close()
