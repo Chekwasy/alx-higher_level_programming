@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""
-List all State objects
-"""
+"""List all State object"""
+
+
 if __name__ == "__main__":
     import sys
     from model_state import Base, State
